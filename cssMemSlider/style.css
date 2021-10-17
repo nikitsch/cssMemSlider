@@ -130,3 +130,32 @@ span {
 #mem4:active ~ .poke .marker4 span:hover {
     background-color: white
 }
+
+@media (max-width: 20rem) {
+    .wrapper {
+        width: 18.75rem;
+        margin: 5% auto;
+        justify-content: center;
+    }
+    .slider {
+        height: 10.5rem;
+        border-radius: 5%;
+        overflow: hidden;
+    }
+    .memes {
+        width: 18.75rem;
+        height: 10.5rem;
+    }
+    .explanation {
+        width: 100%;
+        order: 2;
+    }
+    .text {
+        font-size: 1rem;
+    }
+    .poke {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        order: 1;
+    }
+}
