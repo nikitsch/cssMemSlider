@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*,*:before,*:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    height: 1vh;
+    background-color: #25282A;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 56.25rem;
+    margin: 3% auto;
+}
+
+.wrapper > input {
+	display: none
+}
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+    height: 31.25rem;
+    margin-bottom: 2%;
+    border-radius: 3%;
+}
+
+.mem-offset {
+    display: flex;
+    transition: all .2s;
+    width: 400%;
+}
+
+#mem1:checked ~ .slider .mem-offset {margin-left: 0}
+#mem2:checked ~ .slider .mem-offset {margin-left: -100%}
+#mem3:checked ~ .slider .mem-offset {margin-left: -200%}
+#mem4:checked ~ .slider .mem-offset {margin-left: -300%}
+
+.memes {
+    width: 56.25rem;
+    height: 31.25rem;
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+}
+
+.memFirst {background-image: url("assets/sl1.jpg");}
+.memSecond {background-image: url("assets/sl2.jpg");}
+.memTthird {background-image: url("assets/sl3.jpg");}
+.memFourth {background-image: url("assets/sl4.jpg");}
+
+.explanation {
+    overflow: hidden;
+    width: 50vw;
+    height: 10vh;
+}
+
+.text-offset {
+    display: flex;
+    transition: all .2s;
+    width: 400%;
+}
+
+#mem1:checked ~ .explanation .text-offset {margin-left: 0}
+#mem2:checked ~ .explanation .text-offset {margin-left: -100%}
+#mem3:checked ~ .explanation .text-offset {margin-left: -200%}
+#mem4:checked ~ .explanation .text-offset {margin-left: -300%}
+
+.text {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+    color: white;
+    /* padding: 20px 0; */
+}
+
+.poke {
+    display: flex;
+    margin: 0%;
+}
+
+label {
+    display: inline-block;
+    text-align: center;
+    margin-left: 0.2rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+label:hover span {
+    background-color: white
+}
+
+span {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #71ABFF;
+}
+
+#mem1:checked ~ .poke .marker1:hover span,
+#mem2:checked ~ .poke .marker2:hover span,
+#mem3:checked ~ .poke .marker3:hover span,
+#mem4:checked ~ .poke .marker4:hover span {
+    border-color: white
+}
+
+#mem1:checked ~ .poke .marker1 span,
+#mem2:checked ~ .poke .marker2 span,
+#mem3:checked ~ .poke .marker3 span,
+#mem4:checked ~ .poke .marker4 span {
+    border: 0.15rem solid #71ABFF;
+    background: transparent;
+}
+
+#mem1:active ~ .poke .marker1 span:hover,
+#mem2:active ~ .poke .marker2 span:hover,
+#mem3:active ~ .poke .marker3 span:hover,
+#mem4:active ~ .poke .marker4 span:hover {
+    background-color: white
+}
